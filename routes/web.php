@@ -15,6 +15,6 @@ Route::get('/singup', function () {
     return view('singup');
 })->name('singup');
 
-Route::post('/singup', [SignLoginController::class, 'signup'])->name('singup'); 
-Route::post('/login', [SignLoginController::class, 'loginCheck'])->name('login');
+Route::post('/singup/stor', [SignLoginController::class, 'signup'])->name('usersingup'); 
+Route::post('/login/user', [SignLoginController::class, 'loginCheck'])->name('loginCheck');
 

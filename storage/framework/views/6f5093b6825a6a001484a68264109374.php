@@ -18,23 +18,33 @@
 <div class="register-box">
   <div class="register-logo">
   <a href=""><b>Car Rent</b></a>
+
   </div>
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Login your account</p>
+      <p class="login-box-msg">Create user new account</p>
 
-      <form action="{{ route('loginCheck') }}" method="post" class="mb-2" enctype="multipart/form-data">
-        @csrf
+      <form action=" <?php echo e(route('usersingup')); ?>" method="post" class="mb-2" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?> 
+        <div class="input-group ">
+          <input type="text" name="full_name" value="" class="form-control" placeholder="Full_Name">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+
         <div class="input-group mt-3">
-          <input type="text" name="email"  value="" class="form-control" placeholder="Email">
+          <input type="text" name="email" value="" class="form-control" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
-        
+    
         <div class="input-group mt-3">
           <input type="password" name="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
@@ -43,23 +53,38 @@
             </div>
           </div>
         </div>
+        <span class="text-danger"></span>
 
-        <div class="row mt-3">
+        <div class="input-group my-3">
+    
+        </div>
+        <div class="row">
           
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
           </div>
           <!-- /.col -->
         </div>
       </form>
 
-      <a href="{{ route('singup') }}" class="text-center">I don't have an account</a>
+      <a href="<?php echo e(route('login')); ?>" class="text-center">I already have an account</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
 </div>
 <!-- /.register-box -->
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- jQuery -->
 <script src="/plugins/jquery/jquery.min.js"></script>
@@ -69,3 +94,6 @@
 <script src="/dist/js/adminlte.min.js"></script>
 </body>
 </html>
+
+
+<?php /**PATH C:\Users\AC\Desktop\tes\exam\resources\views/singup.blade.php ENDPATH**/ ?>

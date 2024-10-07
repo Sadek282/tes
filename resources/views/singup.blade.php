@@ -25,7 +25,7 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Create user new account</p>
 
-      <form action=" {{ route('singup') }}" method="post" class="mb-2" enctype="multipart/form-data">
+      <form action=" {{ route('usersingup') }}" method="post" class="mb-2" enctype="multipart/form-data">
         @csrf 
         <div class="input-group ">
           <input type="text" name="full_name" value="" class="form-control" placeholder="Full_Name">

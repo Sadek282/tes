@@ -24,8 +24,8 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Login your account</p>
 
-      <form action="{{ route('loginCheck') }}" method="post" class="mb-2" enctype="multipart/form-data">
-        @csrf
+      <form action="<?php echo e(route('loginCheck')); ?>" method="post" class="mb-2" enctype="multipart/form-data">
+        <?php echo csrf_field(); ?>
         <div class="input-group mt-3">
           <input type="text" name="email"  value="" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -54,7 +54,7 @@
         </div>
       </form>
 
-      <a href="{{ route('singup') }}" class="text-center">I don't have an account</a>
+      <a href="<?php echo e(route('singup')); ?>" class="text-center">I don't have an account</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
@@ -69,3 +69,4 @@
 <script src="/dist/js/adminlte.min.js"></script>
 </body>
 </html>
+<?php /**PATH C:\Users\AC\Desktop\tes\exam\resources\views/login.blade.php ENDPATH**/ ?>
